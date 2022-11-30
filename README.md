@@ -19,7 +19,7 @@ Look up people in our neighbourhood within certain age brackets and with specifi
 ## Handling Requests
 
 ### Storing people, houses and addresses: 
-The API allows users to add a 'house' entry to the dataset using a POST method to the route '/houses'
+The API allows users to add a 'house' entry to the dataset using a POST method to the route '/houses' to push their entry onto the dataset
 
 ### Look up a house, its address and owner: 
 Users can pull a house's information by using GET methods to specific house IDs (i.e. /houses/2) or use the GET method to get all houses by using the path (/houses)
@@ -30,11 +30,12 @@ Users will input a minimum and maximum age and the API will present the people i
 ## Routes
 These are the routes that the API will need with their HTTP verb to enable users to perform lookups and create entries
 
-POST /houses<br />
-GET /houses<br />
-GET /houses/:id<br />
-GET /houses/owner.age?min=""&max=""<br />
-GET /houses/owner<br />
-GET /houses/address<br />
+POST /houses, the path that pushes the user's entry onto the dataset<br />
+GET /houses, the path that returns all the houses and its information (the owner and address)<br />
+GET /houses/:id, the path that returns the house with a specific id<br />
+GET /houses/owner.age?min=""&max="", the path that uses a query parameter to return houses that have owners between a minimum and maximum<br />
+GET /houses/owner, the path that returns the information of all owners (id, name, age)<br />
+GET /houses/address, the path that returns the information of all addresses (postcode, streetname)<br />
 
 ## Responses
+
