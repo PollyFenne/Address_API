@@ -30,11 +30,11 @@ Users will input a minimum and maximum age and the API will present the people i
 ## Routes
 These are the routes that the API will need with their HTTP verb to enable users to perform lookups and create entries
 
-POST /houses
-GET /houses
-GET /houses/:id
-GET /houses/owner.age?min=""&max=""
-GET /houses/owner
-GET /houses/address
+POST /houses<br />
+GET /houses<br />
+GET /houses/:id<br />
+GET /houses/owner.age?min=""&max=""<br />
+GET /houses/owner<br />
+GET /houses/address<br />
 
 ## Responses
