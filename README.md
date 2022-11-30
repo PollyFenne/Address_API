@@ -13,4 +13,28 @@ Store people, houses and addresses
 Look up a house, its address and owner
 Look up people in our neighbourhood within certain age brackets and with specific household sizes
 
+## Schema
 ![image](https://user-images.githubusercontent.com/113044818/204768700-444253f2-5194-4ac4-a57f-8da776fea92e.png)
+
+## Handling Requests
+
+# Storing people, houses and addresses: 
+The API allows users to add a 'house' entry to the dataset using a POST method to the route '/houses'
+
+# Look up a house, its address and owner: 
+Users can pull a house's information by using GET methods to specific house IDs (i.e. /houses/2) or use the GET method to get all houses by using the path (/houses)
+
+# Look up people in our neighbourhood within certain age brackets and with household sizes:
+Users will input a minimum and maximum age and the API will present the people in the neighbourhood with an age in that range by using the GET method with a route that has a query parameter. The route would be (/houses/owner.age?min="inputMin"&max="inputMax"), this would return a JSON file with all houses that has a person within the age range.
+
+## Routes
+These are the routes that the API will need with their HTTP verb to enable users to perform lookups and create entries
+
+POST /houses
+GET /houses
+GET /houses/:id
+GET /houses/owner.age?min=""&max=""
+GET /houses/owner
+GET /houses/address
+
+## Responses
